@@ -10,7 +10,7 @@ Tech strategist, full-stack dev, and growth engineer with a hybrid soul: marketi
 ---
 
 ## 🔭 I’m currently working on
-- 🚀 [Growflow.studio](https://garofalov.netlify.app) – my personal brand to scale tech for good
+- 🚀 Growflow – my personal brand to scale tech for good
 - 🧠 An AI-powered dashboard for querying and visualizing civic open data
 - 🐹 Playing dangerously with Go, LLMs, and anything I shouldn't push to main
 
