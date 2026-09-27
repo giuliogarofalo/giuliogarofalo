@@ -32,7 +32,7 @@ RAG and agents on domain data with **mandatory source citation**, because that i
 SEO & **GEO** (generative engine optimization), design systems, headless CMS, e-commerce.
 Structured data and entity knowledge graphs, built to be *cited* by generative engines, not just indexed.
 
-### 🏛️ Open Parlamento: civic tech / OSINT
+### 🏛️ [OpenLegis](https://openlegis.it): civic tech / OSINT
 A knowledge graph of how Italian and EU laws relate to each other, fed by connectors to official sources: Normattiva, Camera & Senato, EUR-Lex, Gazzetta Ufficiale, Corte Costituzionale, Cassazione, CKAN, Eurostat.
 The connectors are open source and published as MCP servers (see below).
 
