@@ -1,77 +1,141 @@
 # 👋 Hey, I'm Giulio Garofalo
 
-Tech strategist, full-stack dev, and growth engineer with a hybrid soul: marketing, startups, AI and a mild addiction to weird technologies.
+**Software engineer · Fractional CTO · Growth engineer**
+Licensed *Ingegnere dell'Informazione* (Italy, Sez. A) · 11 years between enterprise consulting and my own products.
 
-🎓 MSc in Management Engineering (almost done)  
-📈 Background in Marketing & Business Strategy  
-🧠 I mix SEO, code and systems thinking to build fast and make things scale.  
-💡 From civic tech to SaaS, I've touched everything except COBOL. And I might get there.
+I build products end-to-end and take responsibility for all of it: architecture, team, release, and what each technical choice actually costs.
+Marketing background, systems-thinking habit, and a mild addiction to weird technologies.
 
----
-
-## 🔭 I’m currently working on
-- 🚀 Growflow – my personal brand to scale tech for good
-- 🧠 An AI-powered dashboard for querying and visualizing civic open data
-- 🐹 Playing dangerously with Go, LLMs, and anything I shouldn't push to main
+🎓 MSc in Management Engineering (LM-31): done, finally
+🏛️ Licensed Information Engineer: September 2026 session
+👨‍🏫 Teaching Computer Science in an Italian technical high school, because explaining things well is the real test
+🧠 SEO, GEO, code and AI, mixed until things scale
+💡 From civic tech to SaaS, I've touched everything except COBOL. Still time.
 
 ---
 
-## 👯 I’m looking to collaborate on
-- Creative AI-powered tools
-- Civic tech, open data & digital rights
-- Projects where marketing, tech, and design collide in chaos & harmony
+## 🔭 What I'm building
+
+### 🧠 [ShopBrain SRL](https://shopbrain.store): founder & CTO *(startup innovativa)*
+A family of SaaS products designed and built in-house, all on one shared infrastructure: Stripe billing, SDKs on npm/PyPI, multi-database PostgreSQL, containerized deploys, integration tests on real databases.
+
+| Product | What it does |
+|---|---|
+| 🛍️ **[ShopBrain](https://shopbrain.store)** | Conversational assistant for e-commerce that answers from the real catalog data. Shopify, WooCommerce, on site, WhatsApp, Telegram |
+| 📅 **[BookBrain](https://bookbrain.it)** | Online bookings and calendars, with an embeddable widget for any site |
+| 📦 **[ShipBrain](https://shipbrain.it)** | Multi-tenant shipment tracking, with an MCP server built in |
+| 🌐 **[SiteBrain](https://sitebrain.it)** | Sites for micro-businesses, regenerated from a URL on a prefab design system |
+
+RAG and agents on domain data with **mandatory source citation**, because that is what makes an output verifiable instead of merely plausible.
+
+### 🚀 [GrowFlow Studio](https://growflow.studio): independent tech consulting
+SEO & **GEO** (generative engine optimization), design systems, headless CMS, e-commerce.
+Structured data and entity knowledge graphs, built to be *cited* by generative engines, not just indexed.
+
+### 🏛️ Open Parlamento: civic tech / OSINT
+A knowledge graph of how Italian and EU laws relate to each other, fed by connectors to official sources: Normattiva, Camera & Senato, EUR-Lex, Gazzetta Ufficiale, Corte Costituzionale, Cassazione, CKAN, Eurostat.
+The connectors are open source and published as MCP servers (see below).
 
 ---
 
-## 🤗 I’m looking to help with
-- Open-source projects that value **collaboration**, **accessibility**, and **sharing**  
-- I'm deeply in love with **openserverless** and anything that makes complex infra... disappear
+## 📦 Open source & packages
+Everything ships under [**@growflowstudio**](https://www.npmjs.com/~growflowstudio) on npm and [**growflowstudio**](https://pypi.org/user/growflowstudio/) on PyPI.
+
+**🏛️ Civic tech: MCP servers**
+| Package | | |
+|---|---|---|
+| [**republic-mcp**](https://github.com/giuliogarofalo/RepublicMCP) | [![npm](https://img.shields.io/npm/v/republic-mcp?logo=npm&label=npm)](https://www.npmjs.com/package/republic-mcp) | Italian Parliament open data: SPARQL tools over the official Camera and Senato endpoints, plus OpenPolis data (votes, attendance, decrees) |
+| [**open-parlamento-mcp**](https://github.com/giuliogarofalo/open-parlamento-mcp) | [![PyPI](https://img.shields.io/pypi/v/open-parlamento-mcp?logo=pypi&logoColor=white&label=pypi)](https://pypi.org/project/open-parlamento-mcp/) | Italian law (Constitution and codes, via LightRAG), EU law (EUR-Lex), parliamentary bills, amendment relations (Normattiva), case law, Eurostat, Gazzetta Ufficiale, CKAN |
+
+**💳 [GrowFlow Billing](https://github.com/giuliogarofalo/growflow-billing)**: the subscription, checkout and invoicing layer behind every *Brain product
+| Package | |
+|---|---|
+| [`@growflowstudio/growflowbilling-client`](https://www.npmjs.com/package/@growflowstudio/growflowbilling-client) | [![npm](https://img.shields.io/npm/v/@growflowstudio/growflowbilling-client?logo=npm&label=npm)](https://www.npmjs.com/package/@growflowstudio/growflowbilling-client) Node/TS client |
+| [`growflowbilling-client`](https://pypi.org/project/growflowbilling-client/) | [![PyPI](https://img.shields.io/pypi/v/growflowbilling-client?logo=pypi&logoColor=white&label=pypi)](https://pypi.org/project/growflowbilling-client/) Python client ([docs](https://docs.growflow.studio/billing-client)) |
+| [`@growflowstudio/growflowbilling-admin-core`](https://www.npmjs.com/package/@growflowstudio/growflowbilling-admin-core) | [![npm](https://img.shields.io/npm/v/@growflowstudio/growflowbilling-admin-core?logo=npm&label=npm)](https://www.npmjs.com/package/@growflowstudio/growflowbilling-admin-core) Headless admin: API client, React Query hooks, types |
+| [`@growflowstudio/growflowbilling-admin-ui`](https://www.npmjs.com/package/@growflowstudio/growflowbilling-admin-ui) | [![npm](https://img.shields.io/npm/v/@growflowstudio/growflowbilling-admin-ui?logo=npm&label=npm)](https://www.npmjs.com/package/@growflowstudio/growflowbilling-admin-ui) shadcn/ui admin pages, forms and tables |
+
+**📅 [GrowFlow Booking](https://github.com/giuliogarofalo/growflow-booking)**: the engine behind BookBrain
+| Package | |
+|---|---|
+| [`@growflowstudio/growflowbooking-widget`](https://www.npmjs.com/package/@growflowstudio/growflowbooking-widget) | [![npm](https://img.shields.io/npm/v/@growflowstudio/growflowbooking-widget?logo=npm&label=npm)](https://www.npmjs.com/package/@growflowstudio/growflowbooking-widget) React components and standalone embed |
+| [`@growflowstudio/growflowbooking-client`](https://www.npmjs.com/package/@growflowstudio/growflowbooking-client) | [![npm](https://img.shields.io/npm/v/@growflowstudio/growflowbooking-client?logo=npm&label=npm)](https://www.npmjs.com/package/@growflowstudio/growflowbooking-client) Node/TS client |
+| [`growflowbooking-client`](https://pypi.org/project/growflowbooking-client/) | [![PyPI](https://img.shields.io/pypi/v/growflowbooking-client?logo=pypi&logoColor=white&label=pypi)](https://pypi.org/project/growflowbooking-client/) Python SDK |
+| [`@growflowstudio/growflowbooking-admin-core`](https://www.npmjs.com/package/@growflowstudio/growflowbooking-admin-core) · [`-admin-ui`](https://www.npmjs.com/package/@growflowstudio/growflowbooking-admin-ui) | Headless admin SDK + shadcn/ui components |
+
+**🛍️ ShopBrain**
+| Package | |
+|---|---|
+| [`@growflowstudio/shopbrain-chat-widget`](https://www.npmjs.com/package/@growflowstudio/shopbrain-chat-widget) | [![npm](https://img.shields.io/npm/v/@growflowstudio/shopbrain-chat-widget?logo=npm&label=npm)](https://www.npmjs.com/package/@growflowstudio/shopbrain-chat-widget) Embeddable AI chat for e-commerce, one script tag |
 
 ---
 
-## 🌱 I’m currently learning
-- LangChain & vector DBs (maybe too many at once)
-- Backend modularity & cloud functions done right
-- How to say "no" to the 10th side project of the week
+## 🧳 Where I've been
+| | |
+|---|---|
+| **Sky** | Software Architect: requirements → architecture → dev teams, ADRs as first-class artifacts |
+| **Facile.it** | Senior SEO Full-Stack Engineer: led SEO optimization on a comparator with millions of users |
+| **Octopus Energy** | Senior Front-End Lead: Italian front-end in a multi-country team |
+| **Liferay** | Full-Stack Dev on an open-source enterprise DXP |
+| **Deloitte** | Cloud Developer: AWS, IaC, serverless, ETL pipelines |
+| **Accenture** | Full-Stack Dev: luxury e-commerce on AEM + SAP Hybris, tracking & analytics |
+| **Henable** | Co-founder: social coop for digital accessibility, before it was cool |
 
 ---
+
+## 👯 Looking to collaborate on
+- MCP servers and AI agents that plug into real business systems
+- Civic tech, open data and digital rights
+- Products where marketing, tech and design collide, in chaos and in harmony
+- Anything that makes complex infra... disappear
+
+## 🌱 Currently learning
+- Knowledge graphs + LightRAG in production
+- AI Act / L. 132/2025 compliance *as an engineering problem*
+- How to say "no" to the 10th side project of the week (still failing)
 
 ## 💬 Ask me about
-- The best sea in Europe to cry on after a failed deploy 🌊  
-- What it feels like to explain SEO to your grandma over Christmas dinner  
-- How I accidentally ranked higher than a client’s homepage 😬  
-- Where to find good Wi-Fi and even better coffee in random countries  
-- The right way to procrastinate while still pretending you're working
+- The best sea in Europe to cry on after a failed deploy 🌊
+- Explaining SEO to your grandma, and now GEO as well
+- How I accidentally ranked higher than a client's homepage 😬
+- Where to find good Wi-Fi and even better coffee in random countries
 
 ---
 
-## ⚡ Fun fact
-- I co-founded a startup in the social impact space before it was sexy  
-- I’ll travel for hackathons, open data, or just a chance to sit by the sea  
-- I like my projects fast, weird, and sometimes slightly overengineered
+## 💻 Tech I actually use
+
+**Languages**
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![Bash](https://img.shields.io/badge/bash-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+
+**Front-end & design systems**
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![Nuxt](https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxt.js&logoColor=#00DC82) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white) ![Strapi](https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white)
+
+**Back-end & data**
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi) ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white) ![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white) ![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-000?style=for-the-badge&logo=apachekafka)
+
+**AI**
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white) ![MCP](https://img.shields.io/badge/MCP-000000?style=for-the-badge&logo=anthropic&logoColor=white) ![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black) ![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+
+**Cloud & delivery**
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white) ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white) ![Stripe](https://img.shields.io/badge/Stripe-5469d4?style=for-the-badge&logo=stripe&logoColor=white) ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
+
+<details>
+<summary>…and a long tail of things I've shipped with at some point</summary>
+
+Angular · Gatsby · Laravel · Symfony · WordPress · AEM · SAP Hybris · Liferay · MongoDB · MySQL · Supabase · Prisma · Firebase · Elasticsearch · Three.js · D3 · React Native · Expo · Electron · Solidity · OCaml · C · R · Vercel · Netlify · Render · CircleCI · GitLab CI · Tealium · GTM · GA4
+</details>
 
 ---
 
-## 📫 How to reach me
-
-📧 giuliogarofalo91@gmail.com  
-📍 Usually somewhere between Italy and wherever the Wi-Fi works
-
-
-## 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/giuls.go) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/giuliogarofalo91) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:giuliogarofalo91@gmail.com) 
-
-# 💻 Tech Stack:
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white) ![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) ![OCaml](https://img.shields.io/badge/OCaml-%23E98407.svg?style=for-the-badge&logo=ocaml&logoColor=white) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white) ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Solidity](https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-%230167ff.svg?style=for-the-badge&logo=digitalOcean&logoColor=white) ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) ![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-000?style=for-the-badge&logo=apachekafka) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![Buefy](https://img.shields.io/badge/Buefy-7957D5?style=for-the-badge&logo=buefy&logoColor=48289E) ![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white) ![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white) ![Context-API](https://img.shields.io/badge/Context--Api-000000?style=for-the-badge&logo=react) ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white) ![Elasticsearch](https://img.shields.io/badge/elasticsearch-%230377CC.svg?style=for-the-badge&logo=elasticsearch&logoColor=white) ![Electron.js](https://img.shields.io/badge/Electron-191970?style=for-the-badge&logo=Electron&logoColor=white) ![Esbuild](https://img.shields.io/badge/esbuild-%23FFCF00.svg?style=for-the-badge&logo=esbuild&logoColor=black) ![Expo](https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi) ![Gatsby](https://img.shields.io/badge/Gatsby-%23663399.svg?style=for-the-badge&logo=gatsby&logoColor=white) ![Gulp](https://img.shields.io/badge/GULP-%23CF4647.svg?style=for-the-badge&logo=gulp&logoColor=white) ![Handlebars](https://img.shields.io/badge/Handlebars-%23000000?style=for-the-badge&logo=Handlebars.js&logoColor=white) ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white) ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens) ![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white) ![Less](https://img.shields.io/badge/less-2B4C80?style=for-the-badge&logo=less&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white) ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white) ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD) ![Nuxt JS](https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxt.js&logoColor=#00DC82) ![PNPM](https://img.shields.io/badge/pnpm-%234a4a4a.svg?style=for-the-badge&logo=pnpm&logoColor=f69220) ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![React Query](https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) ![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white) ![Socket.io](https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![Strapi](https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white) ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) ![Stylus](https://img.shields.io/badge/stylus-%23ff6347.svg?style=for-the-badge&logo=stylus&logoColor=white) ![Three js](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Symfony](https://img.shields.io/badge/symfony-%23000000.svg?style=for-the-badge&logo=symfony&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![Vuetify](https://img.shields.io/badge/Vuetify-1867C0?style=for-the-badge&logo=vuetify&logoColor=AEDDFF) ![WebGL](https://img.shields.io/badge/WebGL-990000?logo=webgl&logoColor=white&style=for-the-badge) ![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black) ![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white) ![WordPress](https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white) ![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white) ![Apache Tomcat](https://img.shields.io/badge/apache%20tomcat-%23F8DC75.svg?style=for-the-badge&logo=apache-tomcat&logoColor=black) ![AmazonDynamoDB](https://img.shields.io/badge/Amazon%20DynamoDB-4053D6?style=for-the-badge&logo=Amazon%20DynamoDB&logoColor=white) ![Couchbase](https://img.shields.io/badge/Couchbase-EA2328?style=for-the-badge&logo=couchbase&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34) ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white) ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white) ![Adobe XD](https://img.shields.io/badge/Adobe%20XD-470137?style=for-the-badge&logo=Adobe%20XD&logoColor=#FF61F6) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![CircleCI](https://img.shields.io/badge/circleci-%23161616.svg?style=for-the-badge&logo=circleci&logoColor=white) ![GitLab CI](https://img.shields.io/badge/gitlab%20CI-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white) ![Bitbucket](https://img.shields.io/badge/bitbucket-%230047B3.svg?style=for-the-badge&logo=bitbucket&logoColor=white) ![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Airbnb](https://img.shields.io/badge/Airbnb-%23ff5a5f.svg?style=for-the-badge&logo=Airbnb&logoColor=white) ![Bitwarden](https://img.shields.io/badge/bitwarden-%23175DDC.svg?style=for-the-badge&logo=bitwarden&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white) ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![Prettier](https://img.shields.io/badge/prettier-%23F7B93E.svg?style=for-the-badge&logo=prettier&logoColor=black) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![OpenAPI Specification](https://img.shields.io/badge/openapiinitiative-%23000000.svg?style=for-the-badge&logo=openapiinitiative&logoColor=white) ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=Prometheus&logoColor=white) ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white) ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white) ![Vagrant](https://img.shields.io/badge/vagrant-%231563FF.svg?style=for-the-badge&logo=vagrant&logoColor=white)
-# 📊 GitHub Stats:
+## 📊 GitHub stats
 ![](https://github-readme-stats.vercel.app/api?username=giuliogarofalo&theme=nightowl&hide_border=false&include_all_commits=true&count_private=true)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=giuliogarofalo&theme=nightowl&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=giuliogarofalo&theme=nightowl&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
-### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=giuliogarofalo&limit=5&theme=dark&combine_all_yearly_contributions=true)
-
 ---
-[![](https://visitcount.itsvg.in/api?id=giuliogarofalo&icon=0&color=0)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+## 📫 Reach me
+📧 [giulio@growflow.studio](mailto:giulio@growflow.studio) · 🌐 [growflow.studio](https://growflow.studio)
+📍 Milan, or wherever the Wi-Fi works
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/giuliogarofalo91) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/giuls.go) [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:giulio@growflow.studio)
