@@ -1,118 +1,46 @@
-# 👋 Hey, I'm Giulio Garofalo
+# Giulio Garofalo
 
-**Software engineer · Fractional CTO · Growth engineer · high-school CS teacher**<br>
-Qualified *Ingegnere dell'Informazione* (Italian state exam, Sez. A) · 11 years between enterprise consulting and my own products.
+I write software for a living and, since September, I also explain it to teenagers: I teach computer science at a technical high school. Of everything on this page, teaching is the one I'm still learning to do.
 
-I build products end-to-end and take responsibility for all of it: architecture, team, release, and what each technical choice actually costs.
-Economics first, engineering after, marketing all along. Systems-thinking habit, and a mild addiction to weird technologies.
+I've been at this for eleven years. Most of them went into other people's platforms (Accenture, Deloitte, Liferay, Octopus Energy, Facile.it, Sky), the recent ones into my own. I took a degree in economics before the one in engineering, so I tend to ask what a technical choice costs before I ask whether it's elegant.
 
-- 🎓 MSc in Management Engineering (LM-31): done, finally. Before that, a BSc in Economics and Business Management (L-18) and a postgraduate Master in Digital Management at Ca' Foscari / H-Farm
-- 🏛️ Qualified Information Engineer (Italian state exam, Section A): September 2026 session, registration with the Order in progress
-- 👨‍🏫 Teaching Computer Science in an Italian technical high school. Currently learning to teach, which turns out to be a separate skill from knowing things
-- 🧠 SEO, GEO, code and AI, mixed until things scale
-- 💡 From civic tech to SaaS, I've touched everything except COBOL. Still time.
+Qualified *Ingegnere dell'Informazione* (Italian state exam, Section A, September 2026). MSc in Management Engineering, BSc in Economics and Business Management, and a postgraduate year in Digital Management at Ca' Foscari / H-Farm in between.
 
----
+## What I'm working on
 
-## 🔭 What I'm building
+**[ShopBrain](https://shopbrain.store)** is the company I founded in 2025. Its main product is a chat assistant for online shops. It reads the shop's real catalogue and answers from that, on the site, on WhatsApp and on Telegram, with Shopify and WooCommerce plugged in. When the conversation needs a person, a person can take it over.
 
-### 🧠 [ShopBrain SRL](https://shopbrain.store): founder & CTO *(startup innovativa)*
-A family of SaaS products designed and built in-house, all on one shared infrastructure: Stripe billing, SDKs on npm/PyPI, multi-database PostgreSQL, containerized deploys, integration tests on real databases.
+Three smaller products came out of the same codebase and share its billing and infrastructure:
 
-| Product | What it does |
-|---|---|
-| 🛍️ **[ShopBrain](https://shopbrain.store)** | AI assistant for e-commerce that answers from the real catalog data, with live chat takeover when a human is needed. Shopify, WooCommerce, site widget, WhatsApp, Telegram |
-| 📅 **[BookBrain](https://bookbrain.it)** | Appointments and bookings: embeddable widget, Google Calendar sync, real-time queues, API and SDKs |
-| 📦 **[ShipBrain](https://shipbrain.it)** | Shipment management with Poste and SDA tracking, labels and waybills, white-label, cloud or self-hosted, with an MCP server built in |
-| 🌐 **[SiteBrain](https://sitebrain.it)** | Paste your Instagram or your current site, get a real website a minute later, copy included. €19, once |
+- [BookBrain](https://bookbrain.it) handles appointments: a widget you embed in your site, Google Calendar sync, live queues.
+- [ShipBrain](https://shipbrain.it) manages shipments and parcels, with Poste and SDA tracking. It began as a tool for a single winery, which still uses it every day.
+- [SiteBrain](https://sitebrain.it): you paste your Instagram or your old site, and a minute later you are looking at a new one. It costs €19, once.
 
-RAG and agents on domain data with **mandatory source citation**, because that is what makes an output verifiable instead of merely plausible.
+**[OpenLegis](https://openlegis.it)** answers questions about Italian and EU law and shows which article each answer comes from. Underneath there is a graph of which law amends or cites which, built from official sources: Normattiva, Camera and Senato, EUR-Lex, Gazzetta Ufficiale, the Constitutional Court, Cassazione, Eurostat. I publish the connectors as MCP servers so that other people's agents can use them too.
 
-### 🚀 [GrowFlow Studio](https://growflow.studio): independent tech consulting
-SEO & **GEO** (generative engine optimization), design systems, headless CMS, e-commerce.
-Structured data and entity knowledge graphs, built to be *cited* by generative engines, not just indexed.
+**[GrowFlow Studio](https://growflow.studio)** is where client work goes: technical SEO, sites that AI search engines can read and quote, design systems, headless CMS. Recent jobs include the four-language site and cellar-visit bookings for [d'Araprì](https://www.darapri.it), a sparkling wine house in Puglia, and [Signor G](https://signorg.ai), a vinyl shop with search across marketplaces and an AI assistant behind the counter. With the d'Araprì people I also made [WineQuiz](https://winequiz.it), for sommeliers who like being tested.
 
-### 🏛️ [OpenLegis](https://openlegis.it): civic tech / OSINT
-An agent that answers questions on the Italian Constitution, the codes and EU law with real, citable sources (ELI/CELEX), on top of a navigable knowledge graph of how laws relate to each other.
-It is fed by connectors to official sources: Normattiva, Camera & Senato, EUR-Lex, Gazzetta Ufficiale, Corte Costituzionale, Cassazione, CKAN, Eurostat.
-The connectors are open source and published as MCP servers (see below); the [front-end](https://github.com/giuliogarofalo/openlegis-frontend) is public too.
+## Packages
 
-### 🤝 Clients, and things built with people I like
-| | |
-|---|---|
-| 🥂 **[d'Araprì](https://www.darapri.it)** | Traditional-method sparkling wine house in Puglia since 1979: four-language editorial site, headless CMS and cellar-experience booking |
-| 🎶 **[Signor G](https://signorg.ai)** | Platform for the vinyl record trade: unified search across marketplaces, inventory management and an AI shopkeeper with opinions about your taste |
-| 🍷 **[WineQuiz](https://winequiz.it)** | A quiz on wine and winemaking, written with the d'Araprì people for sommeliers who enjoy being questioned |
+- [`republic-mcp`](https://www.npmjs.com/package/republic-mcp) (npm, [source](https://github.com/giuliogarofalo/RepublicMCP)): Italian Parliament open data, queried on the official Camera and Senato SPARQL endpoints.
+- [`open-parlamento-mcp`](https://pypi.org/project/open-parlamento-mcp/) (PyPI, [source](https://github.com/giuliogarofalo/open-parlamento-mcp)): Italian and EU law, case law, Eurostat, Gazzetta Ufficiale.
+- GrowFlow Billing, the subscriptions and invoicing layer under every product above: [Node client](https://www.npmjs.com/package/@growflowstudio/growflowbilling-client), [Python client](https://pypi.org/project/growflowbilling-client/), [admin core](https://www.npmjs.com/package/@growflowstudio/growflowbilling-admin-core), [admin UI](https://www.npmjs.com/package/@growflowstudio/growflowbilling-admin-ui).
+- GrowFlow Booking, the engine under BookBrain: [widget](https://www.npmjs.com/package/@growflowstudio/growflowbooking-widget), [Node client](https://www.npmjs.com/package/@growflowstudio/growflowbooking-client), [Python client](https://pypi.org/project/growflowbooking-client/), [admin core](https://www.npmjs.com/package/@growflowstudio/growflowbooking-admin-core), [admin UI](https://www.npmjs.com/package/@growflowstudio/growflowbooking-admin-ui).
+- [`shopbrain-chat-widget`](https://www.npmjs.com/package/@growflowstudio/shopbrain-chat-widget): the ShopBrain chat, embedded with one script tag.
 
----
+## Where I worked
 
-## 📦 Open source & packages
-Everything ships under [**@growflowstudio**](https://www.npmjs.com/~growflowstudio) on npm and [**growflowstudio**](https://pypi.org/user/growflowstudio/) on PyPI.
-
-**🏛️ Civic tech: MCP servers**
-| Package | | |
+| | | |
 |---|---|---|
-| [**republic-mcp**](https://github.com/giuliogarofalo/RepublicMCP) | [![npm](https://img.shields.io/npm/v/republic-mcp?logo=npm&label=npm)](https://www.npmjs.com/package/republic-mcp) | Italian Parliament open data: SPARQL tools over the official Camera and Senato endpoints, plus OpenPolis data (votes, attendance, decrees) |
-| [**open-parlamento-mcp**](https://github.com/giuliogarofalo/open-parlamento-mcp) | [![PyPI](https://img.shields.io/pypi/v/open-parlamento-mcp?logo=pypi&logoColor=white&label=pypi)](https://pypi.org/project/open-parlamento-mcp/) | Italian law (Constitution and codes, via LightRAG), EU law (EUR-Lex), parliamentary bills, amendment relations (Normattiva), case law, Eurostat, Gazzetta Ufficiale, CKAN |
+| 2025 | Sky | Software architect: from requirements to designs the delivery teams could build |
+| 2023–25 | Facile.it | Led the SEO engineering team of a comparison site with millions of users |
+| 2022–23 | Octopus Energy | Led the Italian front-end, in a team spread over several countries |
+| 2020–22 | Liferay | Full-stack developer on an open-source enterprise platform |
+| 2019 | Deloitte | AWS architectures and data pipelines for fashion and manufacturing |
+| 2017–19 | Accenture | E-commerce for fashion and eyewear brands, on AEM and SAP Hybris |
+| 2015–17 | Henable | Co-founded a social cooperative in Venice building accessible digital services |
 
-**💳 GrowFlow Billing** ([TypeScript](https://github.com/giuliogarofalo/growflow-billing-ts) · [Python](https://github.com/giuliogarofalo/growflow-billing-py)): the subscription, checkout and invoicing layer behind every *Brain product
-| Package | |
-|---|---|
-| [`@growflowstudio/growflowbilling-client`](https://www.npmjs.com/package/@growflowstudio/growflowbilling-client) | [![npm](https://img.shields.io/npm/v/@growflowstudio/growflowbilling-client?logo=npm&label=npm)](https://www.npmjs.com/package/@growflowstudio/growflowbilling-client) Node/TS client |
-| [`growflowbilling-client`](https://pypi.org/project/growflowbilling-client/) | [![PyPI](https://img.shields.io/pypi/v/growflowbilling-client?logo=pypi&logoColor=white&label=pypi)](https://pypi.org/project/growflowbilling-client/) Python client |
-| [`@growflowstudio/growflowbilling-admin-core`](https://www.npmjs.com/package/@growflowstudio/growflowbilling-admin-core) | [![npm](https://img.shields.io/npm/v/@growflowstudio/growflowbilling-admin-core?logo=npm&label=npm)](https://www.npmjs.com/package/@growflowstudio/growflowbilling-admin-core) Headless admin: API client, React Query hooks, types |
-| [`@growflowstudio/growflowbilling-admin-ui`](https://www.npmjs.com/package/@growflowstudio/growflowbilling-admin-ui) | [![npm](https://img.shields.io/npm/v/@growflowstudio/growflowbilling-admin-ui?logo=npm&label=npm)](https://www.npmjs.com/package/@growflowstudio/growflowbilling-admin-ui) shadcn/ui admin pages, forms and tables |
-
-**📅 GrowFlow Booking**: the engine behind [BookBrain](https://bookbrain.it)
-| Package | |
-|---|---|
-| [`@growflowstudio/growflowbooking-widget`](https://www.npmjs.com/package/@growflowstudio/growflowbooking-widget) | [![npm](https://img.shields.io/npm/v/@growflowstudio/growflowbooking-widget?logo=npm&label=npm)](https://www.npmjs.com/package/@growflowstudio/growflowbooking-widget) React components and standalone embed |
-| [`@growflowstudio/growflowbooking-client`](https://www.npmjs.com/package/@growflowstudio/growflowbooking-client) | [![npm](https://img.shields.io/npm/v/@growflowstudio/growflowbooking-client?logo=npm&label=npm)](https://www.npmjs.com/package/@growflowstudio/growflowbooking-client) Node/TS client |
-| [`growflowbooking-client`](https://pypi.org/project/growflowbooking-client/) | [![PyPI](https://img.shields.io/pypi/v/growflowbooking-client?logo=pypi&logoColor=white&label=pypi)](https://pypi.org/project/growflowbooking-client/) Python SDK |
-| [`@growflowstudio/growflowbooking-admin-core`](https://www.npmjs.com/package/@growflowstudio/growflowbooking-admin-core) · [`-admin-ui`](https://www.npmjs.com/package/@growflowstudio/growflowbooking-admin-ui) | Headless admin SDK + shadcn/ui components |
-
-**🛍️ ShopBrain**
-| Package | |
-|---|---|
-| [`@growflowstudio/shopbrain-chat-widget`](https://www.npmjs.com/package/@growflowstudio/shopbrain-chat-widget) | [![npm](https://img.shields.io/npm/v/@growflowstudio/shopbrain-chat-widget?logo=npm&label=npm)](https://www.npmjs.com/package/@growflowstudio/shopbrain-chat-widget) Embeddable AI chat for e-commerce, one script tag |
-
----
-
-## 🧳 Where I've been
-| | |
-|---|---|
-| **Sky** | Software Architect: requirements → architecture → dev teams, ADRs as first-class artifacts |
-| **Facile.it** | Senior SEO Full-Stack Engineer: led SEO optimization on a comparator with millions of users |
-| **Octopus Energy** | Senior Front-End Lead: Italian front-end in a multi-country team |
-| **Liferay** | Full-Stack Dev on an open-source enterprise DXP |
-| **Deloitte** | Cloud Developer: AWS, IaC, serverless, ETL pipelines |
-| **Accenture** | Full-Stack Dev: luxury e-commerce on AEM + SAP Hybris, tracking & analytics |
-| **Henable** | Co-founder: social coop for digital accessibility, before it was cool |
-
----
-
-## 👯 Looking to collaborate on
-- MCP servers and AI agents that plug into real business systems
-- Civic tech, open data and digital rights
-- Products where marketing, tech and design collide, in chaos and in harmony
-- Anything that makes complex infra... disappear
-
-## 🌱 Currently learning
-- How to teach: explaining a `for` loop to a room of teenagers is harder than shipping one to production
-- Knowledge graphs + LightRAG in production
-- AI Act / L. 132/2025 compliance *as an engineering problem*
-- How to say "no" to the 10th side project of the week (still failing)
-
-## 💬 Ask me about
-- The best sea in Europe to cry on after a failed deploy 🌊
-- Explaining SEO to your grandma, and now GEO as well
-- Why a classroom is the toughest code review I've ever sat through
-- How I accidentally ranked higher than a client's homepage 😬
-- Where to find good Wi-Fi and even better coffee in random countries
-
----
-
-## 💻 Tech I actually use
+## What I use
 
 **Languages**
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![Bash](https://img.shields.io/badge/bash-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
@@ -135,17 +63,15 @@ Everything ships under [**@growflowstudio**](https://www.npmjs.com/~growflowstud
 Angular · Gatsby · Laravel · Symfony · WordPress · AEM · SAP Hybris · Liferay · MongoDB · MySQL · Supabase · Prisma · Firebase · Elasticsearch · Three.js · D3 · React Native · Expo · Electron · Solidity · OCaml · C · R · Vercel · Netlify · Render · CircleCI · GitLab CI · Tealium · GTM · GA4
 </details>
 
----
+## Numbers
 
-## 📊 GitHub stats
 ![](https://github-readme-stats.vercel.app/api?username=giuliogarofalo&theme=nightowl&hide_border=false&include_all_commits=true&count_private=true)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=giuliogarofalo&theme=nightowl&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=giuliogarofalo&theme=nightowl&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=giuliogarofalo&theme=nightowl&hide_border=false&layout=compact&exclude_repo=openlegis-frontend)
 
----
+## Write to me
 
-## 📫 Reach me
-📧 [giulio@growflow.studio](mailto:giulio@growflow.studio) · 🌐 [growflow.studio](https://growflow.studio)<br>
-📍 Milan, or wherever the Wi-Fi works
+If you are building MCP servers, working with public data, or need someone who can sit between marketing and engineering without translating twice, I'd like to hear about it. I can also explain SEO to your grandmother, and I have opinions on which European sea is best after a failed deploy.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/giuliogarofalo91) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/giuls.go) [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:giulio@growflow.studio)
+[giulio@growflow.studio](mailto:giulio@growflow.studio) · [growflow.studio](https://growflow.studio) · [LinkedIn](https://linkedin.com/in/giuliogarofalo91) · [Instagram](https://instagram.com/giuls.go)<br>
+Milan, or wherever the Wi-Fi works.
